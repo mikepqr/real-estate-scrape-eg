@@ -39,3 +39,6 @@ jobs:
         timestamp=$(date -u)
         git commit -m "Scraped at ${timestamp}" || exit 0
         git push
+    - name: Set workflow status
+      # success if NaN is not present in last line of data.csv
+      run: tail -1 data.csv | grep -q -v NaN
