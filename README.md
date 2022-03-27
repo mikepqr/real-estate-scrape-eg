@@ -12,6 +12,12 @@ for [594 S Mapleton Dr, Los
 Angeles](https://www.redfin.com/CA/Los-Angeles/594-S-Mapleton-Dr-90024/home/6824711)
 (not my house!)
 
+**Note**: this house happens to have been on the market since February 2022, which
+means Redfin is refusing to generate an estimate for it. The Zillow estimate is
+recorded successfully, but the workflow is marked as failing because we don't
+get both estimates. The Redfin estimate will presumably return when the house is
+sold.
+
 ## Automated usage
 
 1. Sign up for [scraperapi](https://www.scraperapi.com/) and make a note of your
