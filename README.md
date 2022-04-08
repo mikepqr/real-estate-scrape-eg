@@ -24,7 +24,7 @@ sold.
    API key. The free account is enough to get started.
 
 2. Make a copy of this repository, e.g. [using the
-   template](https://github.com/mikepqr/real-estate-scrape/generate).
+   template](https://github.com/mikepqr/real-estate-scrape-eg/generate).
 
 3. Commit changes deleting `data.csv` and `data.png`.
 
