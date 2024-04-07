@@ -33,5 +33,11 @@ jobs:
         git commit -m "Scraped at ${timestamp}" || exit 0
         git push
     - name: Set workflow status
-      # success if NaN is not present in last line of data.csv
-      run: tail -1 data.csv | grep -q -v NaN
+      run: |
+        # Each NaN in data.csv corresponds to a failure
+        failures=$(tail -1 data.csv | grep -o NaN | wc -l)
+        echo "Number of failures:" $failures
+        # We don't pay for scraperapi so Zillow failure is expected. We only
+        # want the workflow to fail if both fail. Change 2 to 1 if you want want
+        # to fail if either Zillow or Redfin scraping fails.
+        (( $failures < 2 ))
